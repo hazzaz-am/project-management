@@ -1,0 +1,32 @@
+{
+	"boards": [
+		{
+			"id": "1",
+			"title": "Frontend Roadmap",
+			"filterTerm": "",
+			"lists": ["HTML Basics", "CSS Frameworks", "JavaScript Projects"],
+			"tasks": ["Build Portfolio", "Learn Tailwind", "Explore React"]
+		},
+		{
+			"id": "2",
+			"title": "Backend Learning",
+			"filterTerm": "",
+			"lists": ["Node.js", "Express.js", "MongoDB"],
+			"tasks": ["Create REST API", "Learn Mongoose", "Set up JWT Auth"]
+		},
+		{
+			"id": "3",
+			"title": "100 Days Challenge",
+			"filterTerm": "",
+			"lists": ["Day 1 - Navbar", "Day 2 - Search Menu"],
+			"tasks": ["Day 3 - Slideshow", "Day 4 - Modal"]
+		},
+		{
+			"id": "4",
+			"title": "Job Preparation",
+			"filterTerm": "",
+			"lists": ["Update Resume", "Create LinkedIn Posts", "Mock Interviews"],
+			"tasks": ["Apply to 3 Jobs/Day", "Daily LeetCode"]
+		}
+	]
+}

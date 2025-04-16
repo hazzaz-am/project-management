@@ -1,6 +1,12 @@
+import { AllBoards } from "./components/AllBoards";
+import { BoardsHeader } from "./components/BoardsHeader";
+
 const BoardsPage = () => {
-  return (
-    <div>BoardsPage</div>
-  )
-}
-export default BoardsPage
+	return (
+		<section>
+			<BoardsHeader />
+			<AllBoards />
+		</section>
+	);
+};
+export default BoardsPage;

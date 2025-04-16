@@ -5,7 +5,7 @@ export type BoardType = {
 	tasks: string[];
 };
 
-enum BoardActionTypes {
+export enum BoardActionTypes {
 	CREATE_BOARD = "CREATE_BOARD",
 	CHANGE_BOARD_TITLE = "CHANGE_BOARD_TITLE",
 	REMOVE_BOARD = "REMOVE_BOARD",
@@ -13,6 +13,7 @@ enum BoardActionTypes {
 	REMOVE_LIST_ID_FROM_BOARD = "REMOVE_LIST_ID_FROM_BOARD",
 	ADD_TASK_ID_TO_BOARD = "ADD_TASK_ID_TO_BOARD",
 	REMOVE_TASK_ID_FROM_BOARD = "REMOVE_TASK_ID_FROM_BOARD",
+	UPDATE_FILTER_TERM = "UPDATE_FILTER_TERM",
 }
 
 type CreateBoardAction = {
@@ -57,7 +58,7 @@ export type BoardAction =
 	| AddListIdToBoardAction
 	| RemoveListIdFromBoardAction
 	| AddTaskIdToBoardAction
-	| RemoveTaskIdFromBoardAction;
+	| RemoveTaskIdFromBoardAction
 
 export const boardReducer = (
 	boards: BoardType[] = [],

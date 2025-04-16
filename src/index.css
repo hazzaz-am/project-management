@@ -1,1 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+@import "@radix-ui/themes/styles.css";
 @import "tailwindcss";
+
+
+
+@theme {
+   --font-gothic: "Special Gothic Expanded One", sans-serif;
+}

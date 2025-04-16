@@ -1,4 +1,4 @@
-type BoardType = {
+export type BoardType = {
 	id: string;
 	title: string;
 	lists: string[];
@@ -50,7 +50,7 @@ type RemoveTaskIdFromBoardAction = {
 	payload: { boardId: string; taskId: string };
 };
 
-type BoardAction =
+export type BoardAction =
 	| CreateBoardAction
 	| ChangeBoardTitleAction
 	| RemoveBoardAction
@@ -59,7 +59,10 @@ type BoardAction =
 	| AddTaskIdToBoardAction
 	| RemoveTaskIdFromBoardAction;
 
-export const boardReducer = (boards = [], action: BoardAction): BoardType[] => {
+export const boardReducer = (
+	boards: BoardType[] = [],
+	action: BoardAction
+): BoardType[] => {
 	switch (action.type) {
 		case BoardActionTypes.CREATE_BOARD: {
 			const newBoard = {

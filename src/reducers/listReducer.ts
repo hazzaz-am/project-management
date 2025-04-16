@@ -1,4 +1,4 @@
-type ListType = {
+export type ListType = {
 	id: string;
 	title: string;
 	boardId: string;
@@ -49,7 +49,7 @@ type REMOVE_TASK_ID_FROM_LIST_ACTION = {
 	payload: { listId: string; taskId: string };
 };
 
-type ListAction =
+export type ListAction =
 	| CREATE_LIST_ACTION
 	| UPDATE_LIST_NAME_ACTION
 	| REMOVE_LIST_ACTION
@@ -57,7 +57,7 @@ type ListAction =
 	| ADD_TASK_ID_TO_LIST_ACTION
 	| REMOVE_TASK_ID_FROM_LIST_ACTION;
 
-export const listReducer = (lists = [], action: ListAction): ListType[] => {
+export const listReducer = (lists: ListType[] = [], action: ListAction): ListType[] => {
 	switch (action.type) {
 		case ListActionTypes.CREATE_LIST: {
 			const newList: ListType = {

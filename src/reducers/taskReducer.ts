@@ -1,4 +1,4 @@
-type TaskType = {
+export type TaskType = {
 	id: string;
 	title: string;
 	listId: string;
@@ -43,14 +43,17 @@ type CHANGE_BOARD_ID_OF_TASK_ACTION = {
 	payload: { boardId: string; taskId: string };
 };
 
-type TaskAction =
+export type TaskAction =
 	| CREATE_TASK_ACTION
 	| UPDATE_TASK_NAME_ACTION
 	| REMOVE_TASK_ACTION
 	| CHANGE_LIST_ID_OF_TASK_ACTION
 	| CHANGE_BOARD_ID_OF_TASK_ACTION;
 
-export const taskReducer = (tasks = [], action: TaskAction): TaskType[] => {
+export const taskReducer = (
+	tasks: TaskType[] = [],
+	action: TaskAction
+): TaskType[] => {
 	switch (action.type) {
 		case TaskActionTypes.CREATE_TASK: {
 			const newTask: TaskType = {
